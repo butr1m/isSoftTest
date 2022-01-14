@@ -69,11 +69,11 @@ public class Test {
                 }
             }
         }
-        Map<String, Integer> top5 = bestOfDay.entrySet().stream()
+        Map<String, Integer> top = bestOfDay.entrySet().stream()
                 .sorted((o1, o2) -> o2.getValue().compareTo(o1.getValue()))
                 .limit(1)
                 .collect(Collectors.toMap(key -> key.getKey(), value -> value.getValue()));
-        return (HashMap<String, Integer>) top5;
+        return (HashMap<String, Integer>) top;
     }
 }
 
